@@ -7,15 +7,18 @@ var cards = [
 {
 	rank: "queen",
 	suit: "diamonds",
-	cardImage: "images/queen-of-diamonds.png"},
+	cardImage: "images/queen-of-diamonds.png"
+},
 {
 	rank: "king",
 	suit: "hearts",
-	cardImage: "images/king-of-hearts.png"},
+	cardImage: "images/king-of-hearts.png"
+},
 {
 	rank: "king",
 	suit: "diamonds",
-	cardImage: "images/king-of-diamonds.png"}
+	cardImage: "images/king-of-diamonds.png"
+}
 ];
 
 var cardsInPlay = [];
@@ -33,8 +36,6 @@ var flipCard = function() {
 var cardId = this.getAttribute('data-id');
 console.log("User flipped " + cards[cardId].rank);
 cardsInPlay.push(cards[cardId].rank);
-console.log(cardImage);
-console.log(suit);
 this.setAttribute('src', cards[cardId].cardImage);
 if (cardsInPlay.length === 2) {
 	checkForMatch();
